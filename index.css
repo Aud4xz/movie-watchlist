@@ -16,7 +16,7 @@ html, body {
 
 body {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(275px, 550px) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 550px) minmax(0, 1fr);
     grid-template-areas: ". h ."
                          ". m .";
     background-color: #1C1C1C;
