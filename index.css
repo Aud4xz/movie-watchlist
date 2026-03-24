@@ -1,0 +1,295 @@
+/* ============================================
+   BASE RESET
+   ============================================ */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+
+body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(275px, 550px) minmax(0, 1fr);
+    grid-template-areas: ". h ."
+                         ". m .";
+    background-color: #1C1C1C;
+}
+
+header {
+    grid-area: h;
+    display: grid;
+    grid-template-areas: "i";
+    grid-template-rows: 14.1875em 1.1875em auto;
+    min-width: unset;
+}
+
+main {
+    grid-area: m;
+    grid-row: 2/3;
+    background-color: white;
+    min-height: 48.6875em;
+    margin-top: -2.375em;
+    padding-top: 2.75em;
+}
+
+.main-watchlist {
+    margin-top: -3.375em;
+    padding-top: 2.1875em;
+}
+
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+header img {
+    grid-area: i;
+    width: 100%;
+    max-height: 13em;
+    object-fit: cover;
+    object-position: 0% 20%;
+    filter: brightness(0.3);
+}
+
+.h-wrapper {
+    grid-area: i;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 2.625em;
+    color: white;
+    z-index: 1;
+}
+
+.h-wrapper h1 {
+    font-weight: 900;
+    font-size: 2.674rem;
+}
+
+.h-wrapper a {
+    font-weight: bold;
+    font-size: 0.875rem;
+    color: white;
+    text-decoration: none;
+}
+
+.h-wrapper a:hover,
+.h-wrapper a:focus,
+.h-wrapper a:active {
+    color: #F2F2F2;
+}
+
+
+/* ============================================
+   SEARCH FORM
+   ============================================ */
+
+header form {
+    grid-area: i;
+    align-self: end;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 30.142em;
+    margin: 0 auto;
+}
+
+header form input,
+#search-btn {
+    padding-block: 0.679em;
+    border: none;
+    font-size: 0.875rem;
+}
+
+header form input {
+    padding-block: 0.679em;
+    width: 71%;
+    border-radius: 0.429em 0em 0em 0.429em;
+    border: 0.071em solid #D1D5DB;
+    padding-left: 2.857em;
+    outline: none;
+    background-image: url("images/SearchIcon.png");
+    background-repeat: no-repeat;
+    background-position: 1.071em 0.714em;
+}
+
+header form input,
+header form input::placeholder {
+    color: #6B7280;
+}
+
+header form input:focus {
+    outline: none;
+    border-color: black;
+}
+
+#search-btn {
+    margin: 0em;
+    border-radius: 0em 0.429em 0.429em 0em;
+    width: 29%;
+    color: #374151;
+    cursor: pointer;
+}
+
+#search-btn:focus {
+    outline: none;
+    border-color: black;
+}
+
+
+/* ============================================
+   MAIN TYPOGRAPHY
+   ============================================ */
+
+main h1 {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+main p,
+.details-wrapper button {
+    font-size: 0.75rem;
+    color: #111827;
+}
+
+.title-wrapper img,
+.details-wrapper button img {
+    font-size: 0.75rem;
+}
+
+
+/* ============================================
+   MOVIE FIGURES
+   ============================================ */
+
+figure {
+    display: flex;
+    gap: 1.3125em;
+    border-bottom: 0.0625em solid #E5E7EB;
+    margin-bottom: 1.3125em;
+    padding-bottom: 1.787em;
+}
+
+figure > img {
+    max-height: 9.213em;
+    max-width: 6.1875em;
+    border-radius: 0.146em;
+}
+
+figcaption > p {
+    margin: 0.571em 0em 1.471em 0em;
+    margin-top: 0.571em;
+    max-height: 4.286em;
+    font-size: 0.875rem;
+    color: #6B7280;
+}
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.title-wrapper h1,
+.title-wrapper p,
+.details-wrapper button {
+    margin: 0em;
+}
+
+.title-wrapper img {
+    max-height: 1.25em;
+    margin-left: 0.667em;
+    margin-right: 0.333em;
+}
+
+.title-wrapper p {
+}
+
+.details-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 0.625em;
+}
+
+.details-wrapper p {
+    margin: 0em;
+}
+
+.details-wrapper p:first-child {
+    min-width: 3.333em;
+    margin-right: 1.583em;
+    white-space: nowrap;
+}
+
+.details-wrapper button {
+    display: flex;
+    align-items: center;
+    margin-left: 2.5em;
+    gap: 0.417em;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.details-wrapper button img {
+    max-height: 1.333em;
+}
+
+.read-more {
+    color: #272727;
+    font-size: 0.75rem;
+}
+
+
+/* ============================================
+   EMPTY STATES
+   ============================================ */
+
+.explore,
+.no-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #DFDDDD;
+    font-size: 1.125rem;
+    min-height: 100%;
+}
+
+.explore h1 {
+    margin-top: 0.486em;
+    margin-bottom: 0em;
+}
+
+.explore a {
+    display: flex;
+    align-items: center;
+    gap: 0.389em;
+    text-decoration: none;
+}
+
+.explore a p {
+    font-size: 0.875rem;
+}
+
+.explore a p,
+.explore img {
+    margin: 0em;
+}
+
+.explore > div {
+    margin-top: 0.833em;
+}
+
+.no-results {
+    width: 20.0625em;
+    margin: 0 auto;
+}
