@@ -1,4 +1,4 @@
-const key = process.env.OMDB_KEY
+const key = import.meta.env.VITE_OMDB_KEY
 const mainEl = document.querySelector("main")
 const startHtml = mainEl.innerHTML
 let searchedMoviesIds = []

@@ -1,5 +1,5 @@
 {
-  "name": "Scrim-s03tqlm",
+  "name": "scrim-s03tqlm",
   "description": "https://scrimba.com/frontend-path-c0j/~0nv/s0ihjicnkf/head",
   "scripts": {
     "start": "vite",
@@ -7,8 +7,23 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "vite": "latest"
+  "devDependencies": {
+    "vite": "^8.0.2"
   },
-  "devDependencies": {}
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aud4xz/movie-watchlist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Aud4xz/movie-watchlist/issues"
+  },
+  "homepage": "https://github.com/Aud4xz/movie-watchlist#readme"
 }
+
+
