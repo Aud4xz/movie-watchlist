@@ -116,7 +116,7 @@ header form input {
     border: 0.071em solid #D1D5DB;
     padding-left: 2.857em;
     outline: none;
-    background-image: url("images/SearchIcon.png");
+    background-image: url("public/images/SearchIcon.png");
     background-repeat: no-repeat;
     background-position: 1.071em 0.714em;
 }
